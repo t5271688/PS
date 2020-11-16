@@ -1,4 +1,5 @@
 {
+    "powermode.enabled": true,
     "git.ignoreLimitWarning": true,
     "files.associations": {
         "algorithm": "cpp",
