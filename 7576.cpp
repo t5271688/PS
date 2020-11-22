@@ -31,7 +31,7 @@ int main() {
 	}
 	for (int i = 0;i < N;i++) {
 		for (int j = 0;j < M;j++) {
-			if (!A[i][j]) return !printf("-1");;
+			if (!A[i][j]) return !printf("-1");
 			ans = max(ans, A[i][j]);
 		}
 	}

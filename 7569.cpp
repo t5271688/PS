@@ -11,7 +11,7 @@ bool isInside(int z, int y, int x) {
     return y >= 0 && y < N&& x >= 0 && x < M&& z >= 0 && z < H;
 }
 int main() {
-    //freopen("input.txt", "r", stdin);
+    freopen("input.txt", "r", stdin);
     cin >> M >> N >> H;
     for (int i = 0;i < H;i++) {
         for (int j = 0;j < N;j++) {

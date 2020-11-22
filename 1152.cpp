@@ -3,18 +3,18 @@ using namespace std;
 int main()
 {
     string S;
-    getline(cin,S);
+    getline(cin, S);
     int ans = 0, i = -1;
     bool flag = true;
     while (S[++i] != '\0')
     {
-        if(S[i]==' ')
-            flag=true;
-        else if(flag){
+        if (S[i] == ' ')
+            flag = true;
+        else if (flag) {
             ans++;
-            flag=false;
+            flag = false;
         }
     }
-    cout<<ans;
+    cout << ans;
     return 0;
 }

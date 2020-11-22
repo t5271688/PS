@@ -3,8 +3,7 @@ using namespace std;
 const int MAX_V = 101;
 vector<int> adj[MAX_V];
 bool visited[MAX_V];
-int DFS(int current)
-{
+int DFS(int current) {
     int ret = 1;
     visited[current] = true;
     for (int next : adj[current])
@@ -14,8 +13,7 @@ int DFS(int current)
     }
     return ret;
 }
-int main()
-{
+int main() {
     int V, E;
     cin >> V >> E;
     for (int i = 0; i < E; i++)
