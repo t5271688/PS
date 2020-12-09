@@ -12,8 +12,7 @@ int main() {
         int len1 = strlen(X);
         int len2 = strlen(P);
         int tmp = 0;
-        int Rear = 0;
-        bool error = false;
+        bool error = false, Rear = false;
         for (int i = 1; i < len1 - 1; i++) {
             if (X[i] == ',') {
                 DQ.push_back(tmp);
@@ -23,14 +22,14 @@ int main() {
         }
         if (tmp) DQ.push_back(tmp);
         for (int i = 0; i < len2; i++) {
-            if (P[i] == 'R') Rear++;
+            if (P[i] == 'R') Rear = !Rear;
             else if (P[i] == 'D') {
                 if (DQ.empty()) {
                     error = true;
                     break;
                 }
                 else {
-                    if (Rear % 2) DQ.pop_back();
+                    if (Rear) DQ.pop_back();
                     else DQ.pop_front();
                 }
             }
@@ -39,7 +38,7 @@ int main() {
         else {
             printf("[");
             while (!DQ.empty()) {
-                if (Rear % 2) {
+                if (Rear) {
                     printf("%d", DQ.back());
                     DQ.pop_back();
                 }
