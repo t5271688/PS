@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>//기본적인 별찍기
+#include <bits/stdc++.h>
 using namespace std;
 
 int N;
