@@ -4,7 +4,7 @@ int a[500][500];
 int N;
 void rec(int n) {
     if (!n) return;//기저 사례
-    int s = (N - n) * 2, e = 2 * (N + n) - 3; //초기 N과 재귀단계 n을 이용해 offset설정
+    int s = (N - n) * 2, e = 4 * n - 3 + s; //초기 N과 재귀단계 n을 이용해 offset설정
     for (int i = s;i < e;i++) a[s][i] = a[i][s] = a[e - 1][i] = a[i][e - 1] = 1;//겉 껍질을 그리게 함
     rec(n - 1);//재귀
 }
