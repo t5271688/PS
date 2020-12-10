@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
-int arr[31];
+int arr[32];
 using namespace std;
 
 int solution(int n, vector<int> lost, vector<int> reserve) {
-    fill(arr, arr + 31, 1);
+    fill(arr, arr + 32, 1);
     int answer = 0;
     for (int i : lost) arr[i]--;
     for (int i : reserve) arr[i]++;
