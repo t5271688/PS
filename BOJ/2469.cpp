@@ -16,7 +16,6 @@ int main() {
     for (int i = 'A';i < 'A' + k;i++) s.push_back(i);
     cin >> e;
     for (int i = 0;i < n;i++) cin >> v[i];
-    for (int i = 0;i != 0;i++) cout << i;
     for (int i = 0;v[i][0] != '?';i++) for (int j = 0;j < k - 1;j++) if (v[i][j] == '-') swap(s[j], s[j + 1]);// 위에서부터
     for (int i = n - 1;v[i][0] != '?';i--) for (int j = 0;j < k - 1;j++) if (v[i][j] == '-') swap(e[j], e[j + 1]); //아래에서부터
     for (int i = 0;i < k - 1;i++) {
