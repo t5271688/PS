@@ -17,14 +17,13 @@ int main() {
             }
         }
         if (sum == n) {
-            sort(v.begin(), v.end());
             printf("%d = ", n);
             for (int i = 0;i < v.size();i++) {
                 printf("%d", v[i]);
                 if (i != v.size() - 1) printf(" + ");
             }
-            printf("\n");
         }
-        else printf("%d is NOT perfect.\n", n);
+        else printf("%d is NOT perfect.", n);
+        printf("\n");
     }
 }
