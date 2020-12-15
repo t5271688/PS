@@ -19,10 +19,8 @@ int main() {
     Q.push({ false,1, 1 });
     visited[1][1][0] = 1;
     while (!Q.empty()) {
-        auto top = Q.front();
+        const auto& [C, y, x] = Q.front();
         Q.pop();
-        bool C = top.c;
-        int y = top.y, x = top.x;
         if (y == N && x == M) return !printf("%d", visited[y][x][C]);
         for (int i = 0;i < 4;i++) {
             int nx = x + dir[i][0], ny = y + dir[i][1];
