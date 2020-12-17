@@ -6,6 +6,7 @@ using namespace std;
 vector<bool> able(26, true);
 int req[26];
 int solution(string skill, vector<string> skill_trees) {
+
     for (int i = 0;i < skill.size() - 1;i++) {
         able[skill[i + 1] - 'A'] = false;
         req[skill[i] - 'A'] = skill[i + 1] - 'A';
