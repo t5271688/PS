@@ -1,3 +1,6 @@
+/*
+0~256까지의 모든 높이를 다 해보면 된다.
+*/
 #include <bits/stdc++.h>
 using namespace std;
 int m[500][500], N, M, B, H, T = 2e9;
